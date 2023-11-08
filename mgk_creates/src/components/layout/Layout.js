@@ -5,17 +5,10 @@ import NavBar from './NavBar'
 import SideBar from './SideBar'
 import SearchBar from './SearchBar'
 
-function Layout ({setSelectedUser}) {
+function Layout ({setDisplayUserInfo, setSelectedUser}) {
   const [users, setUsers] = useState([]);
   // const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-
-
-  function searchUser(text) {
-    fetch(`https://api.github.com/search/users?q=${text}`)
-    .then((response) => response.json())
-    .then((data) => setUsers(data))
-  }
 
   useEffect(() => {
     console.log('mounting, fetching, useEffect')
@@ -28,7 +21,6 @@ function Layout ({setSelectedUser}) {
           setIsLoading(false); // Set loading to false when data is fetched
         });
     }, 6000); // Delay of 6 seconds slow Api
-    console.log(users, "received data")
     }, []);
 
     return (
@@ -39,8 +31,8 @@ function Layout ({setSelectedUser}) {
            { isLoading ? (
             <div className='scn-sideBar'>Loading...</div> // Display a loading indicator while data is loading
             ) : (
-            <SideBar users={users} setSelectedUser={setSelectedUser}/>
-    )}
+            <SideBar users={users} setDisplayUserInfo={setDisplayUserInfo} setSelectedUser={setSelectedUser}/>
+              )}
            <div className='scn-card'>
              <Outlet/>
            </div>
