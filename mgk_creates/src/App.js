@@ -9,15 +9,6 @@ import AboutUs from './components/AboutUs';
 
 function App ()  {
 
-  const [datas, setDatas] = useState([]);
-
-  useEffect(() => {
-    fetch('https://api.football-data.org/v4/competitions')
-    .then((response) => response.json())
-    .then((data) => { setDatas(data); })
-
-    console.log(datas)
-    }, []);
   return (
    <BrowserRouter>
      <Routes>
