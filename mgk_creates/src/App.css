@@ -1,0 +1,5 @@
+.github-form {
+    position: relative;
+    display: flex;
+    min-width: 100%;
+}

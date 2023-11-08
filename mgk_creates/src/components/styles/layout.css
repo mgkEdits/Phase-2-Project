@@ -9,8 +9,19 @@
     height: 5vh;
     display: flex;
     padding: 20px 36px;
-    background-color: #C5C6C7;
+    background-color: #cfe1f3;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    justify-content: space-between;
+}
+.right-navBar a{
+  float: left;
+  color: #2c2929;
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-size: 23px;
+ 
 }
 
 /*----------------------------------------------------------------*/
