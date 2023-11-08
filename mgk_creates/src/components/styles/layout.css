@@ -352,6 +352,7 @@
   min-height: calc(100vh - 6rem);
   padding-bottom: 2.5rem;
   text-align: left;
+  display: flex;
 }
 
 .header-title {
