@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
   return (
     <div className='scn-navBar'>
     <div className='left-navBar'>
-      <h2>GitHub</h2>
+      <h2>Git-BoostRepo</h2>
       <img src='./../../images/github.png' alt='logo'/>
     </div>
 
@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
       <a href=''><Link to="/">Home</Link></a>
       <a href=''><Link to="contactUs">Contact</Link></a>
       <a href=''><Link to="aboutUs">About Us</Link></a>
-      <a href='https://github.com/'><img src='./../../images/github.png' alt='logo'/></a>
+      <a href='https://github.com/'><Link>GitHub</Link></a>
     </div>
     
     </div>
