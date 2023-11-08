@@ -1,17 +1,26 @@
 import React from 'react'
-import User from './User'
 
-function SideBar({users}) {
-
-const userList = users.map((user) => {
-  return <User key={user.id} user={user} 
-    onSelect={onSelect}/> 
-})
-
+function SideBar({users,setSelectedUser}) {
+  const handleUserCardClick = (userName) => {
+    setSelectedUser(userName);
+  };
 
   return (
     <div className='scn-sideBar'>
-    <ul>{userList}</ul>
+    {
+      users.map((user) => (
+        <div className='user-cardWrapper'key={user.id}>
+        <div className='user-card' onClick={() => handleUserCardClick(user.login)}>
+          <div>
+          <img  className='avatar' src={user.avatar_url} alt={user.login}></img>
+          </div>
+          <div>
+          <h4>{user.login}</h4>
+          </div>
+        </div>
+      </div>
+      ))
+    }
    </div>
   )
 }

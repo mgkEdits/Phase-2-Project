@@ -30,14 +30,20 @@
 
 /*----------------------------------------------------------------*/
 
-/* -----------------NavBar Styling ----------------------------- */
+/* -----------------SideBar Styling ----------------------------- */
 .scn-sideBar{
     height: 90vh;
-    width: 10vh;
+    width: 20vh;
     display: flex;
+    flex-direction: column;
     padding: 20px 36px;
     background-color:  #cfe1f3;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    align-items: center;
+}
+.scn-sideBar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }
 
 /*----------------------------------------------------------------*/
@@ -92,3 +98,29 @@
   .search-btn:hover {
     background-color: rgb(97, 107, 117);
   }
+
+
+  /*----------------------------------------User Caed-----------------------------------------*/
+.user-cardWrapper{
+ padding: 5px;
+
+}
+.user-card{
+  min-width: 169px;
+  min-height: 45px;
+  display: flex;
+  border-radius: 6px;
+}
+.user-card:hover{
+  background-color: #f8f8f8;
+}
+.user-card h4{
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.avatar {
+  width: 40px;
+  margin: 5px;
+}
+
+  /*---------------------------------------------------------------------------------*/

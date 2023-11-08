@@ -1,12 +1,15 @@
 import React from 'react'
 
-function SearchBar() {
-  return (
+function SearchBar({searchUser}) {
 
+    const handleChange =(event) =>{
+        searchUser (event.target.value);
+    };
+
+  return (
     <div className='github-form'>
         <form id='github-form'>
-        <input className='search' id='search' type='text'placeholder='Search User' name='search'/>
-        <input className='search-btn' type='submit' name='submit'/>
+        <input className='search' onChange={handleChange} type='text' placeholder='Search User' name='search'/>
         </form>
       </div>
   )
