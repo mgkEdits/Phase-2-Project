@@ -32,7 +32,7 @@
 
 /* -----------------SideBar Styling ----------------------------- */
 .scn-sideBar{
-    height: 90vh;
+    height: 85vh;
     width: 20vh;
     display: flex;
     flex-direction: column;
@@ -51,15 +51,19 @@
 /* ----------------- Body Styling ----------------------------- */
 .section-body{
     width: 100%;
-    height: 90vh;
+    max-height: 89vh;
     display: flex;
     flex-direction: row;
 }
 /*--------------------------------------------------------------*/
 
 .scn-card{
-    background-color: aquamarine;
+    background-color: #e3eaf1;;
     width: 100%;
+    overflow-y: auto;
+}
+.scn-card::-webkit-scrollbar{
+  display: none;
 }
 
 
@@ -124,3 +128,218 @@
 }
 
   /*---------------------------------------------------------------------------------*/
+
+  /* contact section */
+.contact {
+  width: 80%;
+  padding: 0.5rem 0 4.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.contact:before,
+.contact:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+}
+.contact:before {
+  top: 0;
+  height: 40%;
+}
+.contact:after {
+  top: 40%;
+  height: 60%;
+}
+.contact-box {
+  width: 100%;
+  background-color: var(--light-one);
+  width: 100%;
+  border-radius: 45px;
+  padding: 3.5rem 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* .contact-box :hover{
+  background-color: #a2aab3;
+  border-radius: 2rem;
+} */
+.contact-info {
+  padding-right: 2rem;
+}
+.contact-form {
+  padding-left: 6rem;
+  padding-top: 6rem;
+}
+.contact-info .title:after {
+  left: 0;
+  transform: initial;
+}
+.information-wrap {
+  margin-top: 1rem;
+}
+.information {
+  display: flex;
+  align-items: center;
+}
+.information:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+.contact-icon {
+  min-width: 67px;
+  height: 67px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: var(--light-one);
+  text-align: center;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.contact-icon i {
+  line-height: 67px;
+}
+.info-text {
+  font-size: 1.3rem;
+  display: inline-block;
+}
+.contact-form .title:after {
+  display: none;
+}
+.contact-form .title {
+  margin: 0;
+}
+.contact-form .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-column-gap: 0.6rem;
+}
+.contact-input {
+  padding: 1.0rem 2.6rem;
+  margin: 0.4rem 0;
+  border: none;
+  outline: none;
+  background: #f3f3f3;
+  border-radius: 4rem;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.contact-input::placeholder {
+  font-weight: 400;
+}
+.contact-input.textarea {
+  resize: none;
+  min-height: 200px;
+  border-radius: 2rem;
+}
+.contact-input:hover {
+  background: #fff8f8;
+}
+.contact-input:focus {
+  background: #eaeaea;
+}
+.contact-input .btn {
+  margin-top: 0.6rem;
+}
+
+/* hire me section  */
+.hireme {
+  padding: 2rem 0;
+  background-color: #a2aab3;
+  border-radius: 35px;
+}
+.hireme .container {
+  text-align: center;
+}.hireme .title {
+  margin-bottom: 2.3rem;
+}
+.hireme .text {
+  max-width: 1000px;
+  margin: 0 auto 1.8rem auto;
+}
+ /*---------------------------------------------------------------------------------*/
+/* About */
+
+.about {
+  overflow: hidden;
+  padding: 0.5rem 0 4.5rem;
+   margin: 0 auto 1.8rem auto;
+}
+
+.about img {
+  max-width: 600px;
+}
+
+.about .text {
+  margin-top: 1rem;
+  line-height: 4.5;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/* container section title */
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 90rem;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+.text {
+  font-size: 1.25rem;
+  color: var(--dark-two);
+  line-height: 1.6;
+}
+.section {
+  padding: 7rem 0;
+  overflow: hidden;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+.title:before {
+  content: attr(data-title);
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--main-color);
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.title:after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-header .text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.title-sm {
+  color: var(--dark-one);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.points-sq {
+  width: 210px;
+}

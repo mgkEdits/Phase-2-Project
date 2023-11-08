@@ -36,7 +36,6 @@ export default function ContactUs() {
                     </div>
         
                     <div className="contact-form">
-                      <h3 className="title">Contact me</h3>
                       <div className="row">
                         <input type="text" className="contact-input" placeholder="First Name"/>
                         <input type="text" className="contact-input" placeholder="Last Name"/>
@@ -60,11 +59,16 @@ export default function ContactUs() {
                 <div className="container">
                   <h3 className="title">Let's talk about a project</h3>
                   <p className="text">
-                    Hey! Do you wish to collaborate on a project? Do you have an idea that you want it to be realised?
-                     <br/>
-                    Ellicit my services. You will be amazed on what can be done.
+                  Let's embark on a collaborative journey to bring your project to life. With a team of skilled developers at our disposal, we can turn your ideas into reality, leveraging a diverse range of expertise. Whether you have a specific vision or need assistance shaping your concept, our collaborative effort will yield impressive results.
+                  <br/>
+                  Our team is equipped to handle various aspects of the project, from conceptualization and design to implementation and optimization. I'm excited to contribute my skills alongside other talented developers to create a robust and innovative solution tailored to your needs.
+                  <br/>
+                  Communication and transparency will be the pillars of our collaboration, ensuring that your vision is not only realized but exceeded. Together, we can navigate the intricacies of development, iterate on ideas, and deliver a product that stands out in today's dynamic landscape.
+                  <br/>
+                  Let's join forces, harness the power of collaboration, and turn your project into a success story. The possibilities are boundless, and I'm eager to be part of this transformative journey with you and the team.
 
                   </p>
+                  <h2>Git-BoostRepo</h2>
                   <a href="" className="btn">Hire me</a>
                 </div>
             </section>
