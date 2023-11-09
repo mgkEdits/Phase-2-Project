@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutUs() {
   return (
-    <section classNmae="about section" id="about">
+    <section className="about section" id="about">
     <div className="container">
       <div className="section-header">
         <h3 className="title" data-title="Who we are">Git-BoostRepo</h3>

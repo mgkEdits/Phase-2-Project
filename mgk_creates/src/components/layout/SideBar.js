@@ -1,9 +1,9 @@
 import React from 'react'
 
-function SideBar({users,setDisplayUserInfo, setSelectedUser}) {
+function SideBar({users,setDisplayUserInfo, onClickUser}) {
 
   const handleUserCardClick = (userName) => {
-    setSelectedUser(userName);
+    onClickUser(userName);
     setDisplayUserInfo(true)
   };
 

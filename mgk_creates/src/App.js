@@ -9,39 +9,32 @@ import User from './components/User';
 
 
 function App ()  {
-  const [selectedUser, setSelectedUser] = useState('');
   const [userRepo, setUserRepo] = useState([])
   const [displayUserInfo, setDisplayUserInfo] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false)
 
-  function findUserRepo() {
-    setLoading(true); 
+  function findUserRepo(selectedUser) {
+    setLoading(true)
     setTimeout(() => {
-      fetch(`https://api.github.com/search/users?q=octocat`)
+      fetch(`https://api.github.com/users/${selectedUser}/repos`)
         .then((response) => response.json())
         .then((data) => {
+          console.log("received Search")
           setUserRepo(data);
-          setLoading(false); // Set loading to false when data is fetched
         });
-    }, 6000); // Delay of 6 seconds slow Api
+    }, 4000); // Delay of 6 seconds slow Api
+    console.log("completed Search")
+    setLoading(false); // Set loading to false when data is fetched
   }
-
- function buffer(){
-  loading ? (
-    <div className='scn-card'>Loading data...</div> // Display a loading indicator while data is loading
-    ) : (
-      <Route  path='' element={<User userRepo={userRepo}/>}/>
-      )
- }
 
   return (
    <BrowserRouter>
      <Routes>
-       <Route path='/' element={<Layout setDisplayUserInfo={setDisplayUserInfo} setSelectedUser={setSelectedUser}/>}>
+       <Route path='/' element={<Layout loading={loading} setDisplayUserInfo={setDisplayUserInfo} onClickUser={findUserRepo}/>}>
        {displayUserInfo ? (
-        {buffer}
+        <Route  path='' element={<User loading={loading} userRepo={userRepo}/>}/>
       ) : (
-        <Route index element={<Home selectedUser={selectedUser}/>}/>
+        <Route index element={<Home/>}/>
       )}
          <Route  path='contactUs' element={<ContactUs/>}/>
          <Route  path='aboutUs' element={<AboutUs/>}/>

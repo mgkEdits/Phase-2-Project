@@ -5,7 +5,7 @@ import NavBar from './NavBar'
 import SideBar from './SideBar'
 import SearchBar from './SearchBar'
 
-function Layout ({setDisplayUserInfo, setSelectedUser}) {
+function Layout ({setDisplayUserInfo, onClickUser,loading}) {
   const [users, setUsers] = useState([]);
   // const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -26,13 +26,13 @@ function Layout ({setDisplayUserInfo, setSelectedUser}) {
     return (
       <div className='section-main'>
         <NavBar/>
-        <SearchBar searchUser={searchUser}/>
+        <SearchBar />
         <div className='section-body'>
            { isLoading ? (
-            <div className='scn-sideBar'>Loading...</div> // Display a loading indicator while data is loading
+              <div className='scn-sideBar'>Loading...</div> // Display a loading indicator while data is loading
             ) : (
-            <SideBar users={users} setDisplayUserInfo={setDisplayUserInfo} setSelectedUser={setSelectedUser}/>
-              )}
+              <SideBar users={users} setDisplayUserInfo={setDisplayUserInfo} onClickUser={onClickUser}/>
+            )}
            <div className='scn-card'>
              <Outlet/>
            </div>
